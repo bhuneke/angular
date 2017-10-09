@@ -4,14 +4,14 @@ import { Component } from "@angular/core";
   selector: "app-root",
   template: `
   <h1>Hey guys!</h1>
-  <div *ngIf="myArr; then tmpl1 else tmpl2"></div>
-  <ng-template #tmpl1>Truth</ng-template>
-  <ng-template #tmpl2>Falsehood</ng-template>
+
+  <img src="{{ angularLogo }}">
+  <img [src]="angularLogo">
+  <img bind-src="angularLogo">
   `,
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  
-  myArr = true
 
+  angularLogo = '';
 }
